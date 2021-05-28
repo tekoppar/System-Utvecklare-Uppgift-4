@@ -1,0 +1,208 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-main {
+    display:grid;
+    grid-template-columns: [left] auto [center] 60% [right] auto;
+    grid-template-rows: [help] max-content [content] auto;
+    height:100%;
+    background-image:url('/content/top-background-cropped.svg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.container {
+    display:grid;
+    grid-template-columns: [left] auto [center] 75% [right] auto;
+    grid-template-rows: [margin] 50px [content] auto [margin2] 50px;
+    height:100%;
+}
+
+.container-3x1 {
+    grid-column: center;
+    grid-row:content;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.responsive-image-height {
+    max-width: 100%;
+    height: 100%;
+}
+
+.left {
+    grid-area: left 1;
+    border:pink 2px dotted;
+}
+
+.container-divider {
+    grid-column:center;
+    height:50px;
+    display:block;
+}
+
+.container-header {
+    grid-column: center;
+    grid-row: help;
+    background-color:transparent;
+    display:grid;
+    grid-template-columns: [main-logo] 20% [spon] 20% [header-buttons] auto;
+    width:100%;
+    align-items: flex-end;
+    margin-top:25px;
+    margin-bottom:25px;
+    align-items: center;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.main-logo {
+    position: relative;
+    font-size: 41px;
+    color: white;
+    font-weight: 900;
+    border:none;
+    background-color:transparent;
+    z-index: 99999;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.main-logo:after {
+    content: '';
+    position: absolute;
+    bottom:calc(20%);
+    width: 12px;
+    height: 12px;
+    background: #FFBB00;
+    border-radius: 50%
+}
+
+.header-buttons {
+    grid-column: header-buttons;
+    background-color:transparent;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    max-width: 80%;
+    width: inherit;
+}
+
+.main-content {
+    grid-column: center;
+    grid-row: content;
+    display: grid;
+    grid-template-columns: [main-text] 40% [main-content-center] auto [main-image] 40%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* grid-template-rows: [main-span] minmax(auto, 150px) [main-content-row-center] auto [main-span2] 150px; */
+    align-content: flex-start;
+}
+
+.main-content-container {
+    grid-column: main-content-center;
+    grid-column-start: 1;
+    grid-column-end: span  2;
+    grid-row: main-content-row-center;
+    display:grid;
+    align-items: center;
+    grid-template-columns: [main-text] 40% [main-content-center] auto [main-image] 40%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.bottom-background-new {
+    background-image:url(/content/top-background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:300%;
+}
+
+.download-background {
+    background-image: url(/content/background-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-y:clip;
+}
+
+.image-three-phones {
+    transform:translateY(150px);
+}
+
+.paragraph {
+    font-size:57px;
+    font-weight: 700;
+    color:white;
+    margin-top:0px;
+    margin-bottom:15px;
+}
+
+.button-navbar {
+    border:none;
+    color: white;
+    font-size:18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    background-color: transparent;
+    position: relative;
+}
+
+.button-navbar:hover {
+    cursor: pointer;
+    color:#FFBB00;
+}
+
+.button-navbar:hover:after {
+    content: '';
+    position: absolute;
+    bottom:-8px;
+    left:10%;
+    width: 50%;
+    height: 4px;
+    background: #FFBB00;
+}
+
+.button-yellow {
+    background-color:#FFBB00;
+    border-radius: 10px;
+    padding:10px 25px 10px 25px;
+    margin-right:0px;
+    border:none;
+    position: relative;
+    font-weight: 500;
+    font-size:16px;
+    color:white;
+}
+
+.button-yellow:hover {
+    cursor:pointer;
+    background-color:#fff5d9;
+    color:#FFBB00;
+}
+
+@media screen and (max-width:900px) {
+    .paragraph {
+        font-size:24px;
+    }
+
+    .btn-video {
+        background-color:#FFBB00;
+    }
+
+    .btn-video img {
+        filter:hue-rotate(180deg);
+    }
+}
